@@ -64,19 +64,20 @@ Model A is implemented strictly from scratch using fundamental PyTorch building 
 
 ## 🏆 Model A Benchmark Results (Held-Out Test Set)
 
-Evaluated strictly on `data/test.csv` (559 samples):
+Evaluated strictly on `data/test.csv` (559 samples) trained on a free **Google Colab Tesla T4 GPU**:
 
 | Metric | Model A (From Scratch) |
 | :--- | :--- |
-| **Test Accuracy** | **98.21%** |
-| **Test Macro-F1** | **0.9615** |
-| **Macro Precision** | **96.68%** |
-| **Macro Recall** | **95.64%** |
-| **Ham F1-Score** | **0.9897** (Precision: 98.76%, Recall: 99.17%) |
-| **Spam F1-Score** | **0.9333** (Precision: 94.59%, Recall: 92.11%) |
-| **Avg. Single-Sample Latency** | **5.24 ms** |
+| **Test Accuracy** | **98.39%** |
+| **Test Macro-F1** | **0.9652** |
+| **Macro Precision** | **97.33%** |
+| **Macro Recall** | **95.74%** |
+| **Ham F1-Score** | **0.9907** (Precision: 98.77%, Recall: 99.38%) |
+| **Spam F1-Score** | **0.9396** (Precision: 95.89%, Recall: 92.11%) |
+| **Avg. Single-Sample Latency** | **2.13 ms** (Tesla T4) |
+| **Total Training Time** | **7.93 seconds** (Tesla T4) |
 | **Trainable Parameters** | **766,210** |
-| **Confusion Matrix** | `[[479, 4], [6, 70]]` |
+| **Confusion Matrix** | `[[480, 3], [6, 70]]` |
 
 Confusion matrix plot saved to `artifacts/model_a_confusion_matrix.png`.
 
