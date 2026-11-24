@@ -1,0 +1,66 @@
+{
+  "dataset_name": "UCI SMS Spam Collection",
+  "task": "Binary Text Classification (Spam vs. Ham)",
+  "source_url": "https://archive.ics.uci.edu/dataset/228/sms+spam+collection",
+  "download_mirror": "https://raw.githubusercontent.com/justmarkham/pycon-2016-tutorial/master/data/sms.tsv",
+  "authors": "Tiago A. Almeida, Jos\u00e9 Mar\u00eda G\u00f3mez Hidalgo, Akbo Yamakami",
+  "citation": "Almeida, T.A., G\u00f3mez Hidalgo, J.M., Yamakami, A. Contributions to the Study of SMS Spam Filtering: New Collection and Results. ACM DocEng 2011.",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "random_seed": 42,
+  "split_ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "label_mapping": {
+    "0": "Ham",
+    "1": "Spam"
+  },
+  "overall_distribution": {
+    "total": 5572,
+    "counts": {
+      "Ham": 4825,
+      "Spam": 747
+    },
+    "percentages": {
+      "Ham": 86.59,
+      "Spam": 13.41
+    }
+  },
+  "splits_distribution": {
+    "train": {
+      "total": 4457,
+      "counts": {
+        "Ham": 3860,
+        "Spam": 597
+      },
+      "percentages": {
+        "Ham": 86.61,
+        "Spam": 13.39
+      }
+    },
+    "val": {
+      "total": 556,
+      "counts": {
+        "Ham": 482,
+        "Spam": 74
+      },
+      "percentages": {
+        "Ham": 86.69,
+        "Spam": 13.31
+      }
+    },
+    "test": {
+      "total": 559,
+      "counts": {
+        "Spam": 76,
+        "Ham": 483
+      },
+      "percentages": {
+        "Spam": 13.6,
+        "Ham": 86.4
+      }
+    }
+  },
+  "subset_justification": "The UCI SMS Spam Collection is the premier peer-reviewed benchmark for binary spam detection. With 5,572 real-world SMS messages, its moderate sequence lengths (mean ~15-20 words, max ~160 words) and realistic class imbalance (~86.6% Ham, ~13.4% Spam) allow an Encoder-only Transformer trained from scratch to converge reliably within minutes on a free Google Colab T4 GPU, providing clear separation of self-attention quality without GPU memory exhaustion or excessive compute overhead."
+}
