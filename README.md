@@ -141,3 +141,25 @@ Open [`notebooks/train_model_a_colab.ipynb`](notebooks/train_model_a_colab.ipynb
 1. Upload the notebook to Google Colab.
 2. Under **Runtime** -> **Change runtime type**, select **T4 GPU**.
 3. Click **Runtime** -> **Run All** to execute data preparation, training, evaluation, and interactive inference.
+
+---
+
+## 🖥️ Member 3: Streamlit Dashboard (`app.py`)
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+| Tab | What it shows |
+| :--- | :--- |
+| Live comparison | Type or pick a message; both models run side by side with label, confidence, probabilities, latency and an agree/disagree banner |
+| Benchmarks | Accuracy, Macro-F1, per-class metrics, latency, parameters and confusion matrices from `results/comparison_metrics.json` |
+| Test-set explorer | Browse/search `data/test.csv`; one-click error analysis listing every message either model misclassifies |
+| Dataset | Source, citation, license, seed and split distribution from `data/dataset_metadata.json` |
+| About | Model summary and requirements checklist |
+
+Model weights are git-ignored. To run live inference, place `artifacts/model_a_scratch.pt` and `artifacts/model_b_pretrained/` locally (train with `scripts/train_scratch.py` and `scripts/train_pretrained.py`). Without them the app still runs; the model panels show setup instructions and the benchmark and dataset tabs work from the saved results.
+
+### Reporting note
+Model A appears with two result sets: the Colab T4 run (98.39% accuracy, Macro-F1 0.9652, 2.13 ms) in the section above, and the CPU re-evaluation (98.21%, 0.9611, 2.14 ms) in `results/`. The dashboard uses the CPU numbers because Model B was evaluated on CPU, so latency is comparable. State this in the report.
