@@ -1,0 +1,19 @@
+{
+  "model_name": "Model B (Pretrained Transformer - DistilBERT)",
+  "base_checkpoint": "distilbert-base-uncased",
+  "task": "Spam / Toxicity Binary Classification",
+  "random_seed": 42,
+  "epochs": 2,
+  "batch_size": 32,
+  "learning_rate": 3e-05,
+  "max_length": 128,
+  "total_parameters": 66955010,
+  "trainable_parameters": 66955010,
+  "fine_tuning_time_seconds": 2111.49,
+  "fine_tuning_time_minutes": 35.19,
+  "best_epoch": 2,
+  "best_val_macro_f1": 0.9639,
+  "best_val_accuracy": 0.9838,
+  "output_directory": "artifacts/model_b_pretrained",
+  "hardware": "CPU"
+}

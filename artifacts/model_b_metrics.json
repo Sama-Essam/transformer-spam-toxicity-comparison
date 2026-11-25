@@ -1,0 +1,42 @@
+{
+  "model_name": "Model B (Pretrained Transformer - DistilBERT)",
+  "task": "Spam / Toxicity Binary Text Classification",
+  "evaluation_split": "test.csv",
+  "num_test_samples": 559,
+  "accuracy": 0.9911,
+  "macro_f1": 0.9809,
+  "macro_precision": 0.9836,
+  "macro_recall": 0.9782,
+  "class_metrics": {
+    "Ham": {
+      "precision": 0.9938,
+      "recall": 0.9959,
+      "f1_score": 0.9948,
+      "support": 483.0
+    },
+    "Spam": {
+      "precision": 0.9733,
+      "recall": 0.9605,
+      "f1_score": 0.9669,
+      "support": 76.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      481,
+      2
+    ],
+    [
+      3,
+      73
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "Ham (0)",
+    "Spam (1)"
+  ],
+  "average_inference_latency_ms": 67.59,
+  "trainable_parameters": 66955010,
+  "training_time_seconds": 2111.49,
+  "hardware": "CPU"
+}

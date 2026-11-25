@@ -1,0 +1,15 @@
+Metric,Model A (From Scratch),Model B (Pretrained)
+Model Architecture,Custom Transformer (Encoder-Only),DistilBERT (distilbert-base-uncased)
+Test Accuracy,98.21%,99.11%
+Macro-F1 Score,0.9611,0.9809
+Macro Precision,97.20%,98.36%
+Macro Recall,95.08%,97.82%
+Ham F1-Score,0.9897,0.9948
+Spam F1-Score,0.9324,0.9669
+Ham Precision / Recall,98.56% / 99.38%,99.38% / 99.59%
+Spam Precision / Recall,95.83% / 90.79%,97.33% / 96.05%
+"Confusion Matrix [[TN, FP], [FN, TP]]","[[480, 3], [7, 69]]","[[481, 2], [3, 73]]"
+Avg. Single-Sample Latency,2.14 ms,67.59 ms
+Trainable Parameters,"766,210","66,955,010"
+Training Time,7.93 s,2111.49 s (35.19 min)
+Evaluation Hardware,CPU,CPU
